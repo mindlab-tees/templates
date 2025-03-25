@@ -12,7 +12,7 @@
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
 
-#show: doc => poster-mindlab(
+#show: doc => poster(
   $if(title)$ title: [$title$], $endif$
   // TODO: use Quarto's normalized metadata.
   $if(poster-authors)$ authors: [$poster-authors$], $endif$
@@ -38,7 +38,10 @@
 
   // DEFAULTS
   // ========
-  // a1 
+  // For 3-column posters, these are generally good defaults.
+  // Tested on 36in x 24in, 48in x 36in, and 36in x 48in posters.
+  // For 2-column posters, you may need to tweak these values.
+  // See ./examples/example_2_column_18_24.typ for an example.
 
   // Any keywords or index terms that you want to highlight at the beginning.
   $if(keywords)$ keywords: ($for(keywords)$"$it$"$sep$, $endfor$), $endif$

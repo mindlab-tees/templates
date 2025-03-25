@@ -1,7 +1,7 @@
 
-#let poster-mindlab(
+#let poster(
   // The poster's size.
-  size: "'A1' or 'A0' or 'A3'",
+  size: "'36x24' or '48x36''",
 
   // The poster's title.
   title: "Paper Title",
@@ -28,10 +28,16 @@
 
   // Color of the footer.
   footer_color: "Hex Color Code",
+  
+  //font
+  mainfont: "Lexica Ultralegible",
 
   // DEFAULTS
   // ========
-  // The default size is A1 but can be set at A1 or A3
+  // For 3-column posters, these are generally good defaults.
+  // Tested on 36in x 24in, 48in x 36in, and 36in x 48in posters.
+  // For 2-column posters, you may need to tweak these values.
+  // See ./examples/example_2_column_18_24.typ for an example.
 
   // Any keywords or index terms that you want to highlight at the beginning.
   keywords: (),
@@ -64,24 +70,10 @@
   body
 ) = {
   // Set the body font.
-  set text(font: "STIX Two Text", size: 16pt)
+  set text(font: mainfont, size: 16pt)
   let sizes = size.split("x")
-  
-  #if size == "A0"[
-  let width = 1189mm
-  let height = 841mm
-  ] else if size == "A3" {
-  let width =  420mm
-  let height = 297mm
-  
-  } else [
-  let width = 841mm
-  let height = 594mm
-  
-  ]
-  
-  
-  
+  let width = int(sizes.at(0)) * 1in
+  let height = int(sizes.at(1)) * 1in
   univ_logo_scale = int(univ_logo_scale) * 1%
   title_font_size = int(title_font_size) * 1pt
   authors_font_size = int(authors_font_size) * 1pt
@@ -92,12 +84,12 @@
   footer_text_font_size = int(footer_text_font_size) * 1pt
 
   // Configure the page.
-  // This poster defaults to A1.
+  // This poster defaults to 36in x 24in.
   set page(
     width: width,
     height: height,
     margin: 
-      (top: 2.5mm, left: 5mm, right: 5mm, bottom: 5mm),
+      (top: 1in, left: 2in, right: 2in, bottom: 2in),
     footer: [
       #set align(center)
       #set text(32pt)
