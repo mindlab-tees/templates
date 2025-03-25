@@ -1,7 +1,7 @@
 
 #let poster(
   // The poster's size.
-  size: "'36x24' or '48x36''",
+  size: "'A0' or 'A1'",
 
   // The poster's title.
   title: "Paper Title",
@@ -13,8 +13,9 @@
   departments: "Department Name",
 
   // University logo.
-  univ_logo: "Logo Path",
-
+  university_logo: "Logo Path",
+  lab_logo: "Logo Path",
+  
   // Footer text.
   // For instance, Name of Conference, Date, Location.
   // or Course Name, Date, Instructor.
@@ -34,10 +35,7 @@
 
   // DEFAULTS
   // ========
-  // For 3-column posters, these are generally good defaults.
-  // Tested on 36in x 24in, 48in x 36in, and 36in x 48in posters.
-  // For 2-column posters, you may need to tweak these values.
-  // See ./examples/example_2_column_18_24.typ for an example.
+
 
   // Any keywords or index terms that you want to highlight at the beginning.
   keywords: (),
@@ -46,13 +44,20 @@
   num_columns: "3",
 
   // University logo's scale (in %).
-  univ_logo_scale: "100",
+  university_logo_scale: "100",
 
-  // University logo's column size (in in).
-  univ_logo_column_size: "10",
+  // lab logo's scale (in %).
+  lab_logo_scale: "100",
 
-  // Title and authors' column size (in in).
-  title_column_size: "20",
+  // University logo's column size (in cm).
+  university_logo_column_size: "10",
+
+  // Title and authors' column size (in cm).
+  title_column_size: "60",
+  
+  // lab logo column size
+  lab_logo_column_size: "10",
+  
 
   // Poster title's font size (in pt).
   title_font_size: "48",
@@ -71,25 +76,38 @@
 ) = {
   // Set the body font.
   set text(font: mainfont, size: 16pt)
-  let sizes = size.split("x")
-  let width = int(sizes.at(0)) * 1in
-  let height = int(sizes.at(1)) * 1in
-  univ_logo_scale = int(univ_logo_scale) * 1%
+  
+   let width = 841mm
+   let height = 594mm
+  
+  if size == "A0" {
+   width = 1189mm
+   height = 841mm
+  }
+  
+  if size == "A1" {
+   width = 841mm
+   height = 594mm
+  }
+  
+  university_logo_scale = int(university_logo_scale) * 1%
+  lab_logo_scale = int(lab_logo_scale) * 1%
   title_font_size = int(title_font_size) * 1pt
   authors_font_size = int(authors_font_size) * 1pt
   num_columns = int(num_columns)
-  univ_logo_column_size = int(univ_logo_column_size) * 1in
-  title_column_size = int(title_column_size) * 1in
+  university_logo_column_size = int(university_logo_column_size) * 1cm
+  lab_logo_column_size = int(lab_logo_column_size) * 1cm
+  title_column_size = int(title_column_size) * 1cm
   footer_url_font_size = int(footer_url_font_size) * 1pt
   footer_text_font_size = int(footer_text_font_size) * 1pt
 
   // Configure the page.
-  // This poster defaults to 36in x 24in.
+  // This poster defaults to A1
   set page(
     width: width,
     height: height,
     margin: 
-      (top: 1in, left: 2in, right: 2in, bottom: 2in),
+      (top: 2.5cm, left: 2.5cm, right: 2.5cm, bottom: 5cm),
     footer: [
       #set align(center)
       #set text(32pt)
@@ -99,11 +117,11 @@
         inset: 20pt,
         radius: 10pt,
         [
-          #text(font: "Courier", size: footer_url_font_size, footer_url) 
+          #text(font: mainfont, size: footer_url_font_size, footer_url) 
           #h(1fr) 
           #text(size: footer_text_font_size, smallcaps(footer_text)) 
           #h(1fr) 
-          #text(font: "Courier", size: footer_url_font_size, footer_email_ids)
+          #text(font: mainfont, size: footer_url_font_size, footer_email_ids)
         ]
       )
     ]
@@ -166,13 +184,14 @@
   align(center,
     grid(
       rows: 2,
-      columns: (univ_logo_column_size, title_column_size),
+      columns: (university_logo_column_size, title_column_size, lab_logo_column_size),
       column-gutter: 0pt,
       row-gutter: 50pt,
-      image(univ_logo, width: univ_logo_scale),
+      image(university_logo, width: university_logo_scale),
       text(title_font_size, title + "\n\n") + 
       text(authors_font_size, emph(authors) + 
           "   (" + departments + ") "),
+      image(lab_logo, width: lab_logo_scale),
     )
   )
 

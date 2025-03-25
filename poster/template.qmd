@@ -2,13 +2,14 @@
 title: This is an academic poster with typst and quarto!
 format:
   poster-typst: 
-    size: "36x24"
-    poster-authors: "A. Smith, B. Jones, C. Brown, D. Miller"
-    departments: "Department of Computer Science"
-    institution-logo: "./images/logos.png"
-    footer-text: "posit::conf 2023"
-    footer-url: "https://posit.co/conference/"
-    footer-emails: "abc@example.com"
+    size: "A1"
+    poster-authors: "C.J. Wilson, S. Medimorec"
+    departments: "Department of Psychology"
+    university-logo: "./images/tu.png"
+    lab-logo: "./images/mindlab.png"
+    footer-text: "Teesside University Research Event 2025"
+    footer-url: "www.themindlab.uk"
+    footer-emails: "christopher.wilson@tees.ac.uk"
     footer-color: "fa9756"
     keywords: ["Typesetting", "Typst", "Quarto"]
 ---

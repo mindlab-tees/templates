@@ -20,7 +20,10 @@
   $if(size)$ size: "$size$", $endif$
 
   // Institution logo.
-  $if(institution-logo)$ univ_logo: "$institution-logo$", $endif$
+  $if(university-logo)$ university_logo: "$university-logo$", $endif$
+
+  // Lab logo.
+  $if(lab-logo)$ lab_logo: "$lab-logo$", $endif$
 
   // Footer text.
   // For instance, Name of Conference, Date, Location.
@@ -50,10 +53,10 @@
   $if(num-columns)$ num_columns: $num-columns$, $endif$
 
   // University logo's scale (in %).
-  $if(univ-logo-scale)$ univ_logo_scale: $univ-logo-scale$, $endif$
+  $if(univ-logo-scale)$ university_logo_scale: $univ-logo-scale$, $endif$
 
   // University logo's column size (in in).
-  $if(univ-logo-column-size)$ univ_logo_column_size: $univ-logo-column-size$, $endif$
+  $if(univ-logo-column-size)$ university_logo_column_size: $univ-logo-column-size$, $endif$
 
   // Title and authors' column size (in in).
   $if(title-column-size)$ title_column_size: $title-column-size$, $endif$
