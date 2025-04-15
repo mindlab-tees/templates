@@ -13,11 +13,17 @@
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
 #show: doc => poster(
+$if(header_left)$
+  header_left: "$header_left$",
+$endif$
 $if(title)$
   title: [$title$],
 $endif$
 $if(subtitle)$
   subtitle: [$subtitle$],
+$endif$
+$if(header_right)$
+  header_right: "$header_right$",
 $endif$
 $if(by-author)$
   authors: (
