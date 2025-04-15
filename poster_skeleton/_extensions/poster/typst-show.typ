@@ -12,19 +12,16 @@
 // documentation on creating typst templates here and some examples here:
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
+
 #show: doc => poster(
-$if(header_left)$
-  header_left: "$header_left$",
-$endif$
-$if(title)$
-  title: [$title$],
-$endif$
-$if(subtitle)$
-  subtitle: [$subtitle$],
-$endif$
-$if(header_right)$
-  header_right: "$header_right$",
-$endif$
+
+$if(header_text_color)$ header_text_color: "$header_text_color$", $endif$
+$if(header_bg_color)$ header_bg_color: "$header_bg_color$", $endif$
+$if(header_left)$ header_left: "$header_left$", $endif$
+$if(title)$ title: [$title$], $endif$
+$if(subtitle)$ subtitle: [$subtitle$],$endif$
+$if(header_right)$ header_right: "$header_right$", $endif$
+$if(author_text_size)$ author_text_size: "$author_text_size$", $endif$
 $if(by-author)$
   authors: (
 $for(by-author)$
@@ -88,6 +85,11 @@ $endif$
 $if(section-numbering)$
   sectionnumbering: "$section-numbering$",
 $endif$
+$if(footer_bg_color)$ footer_bg_color: "$footer_bg_color$", $endif$
+$if(footer_text_color)$ footer_text_color: "$footer_text_color$", $endif$
+$if(footer_right)$ footer_right: "$footer_right$", $endif$
+$if(footer_left)$ footer_left: "$footer_left$", $endif$
+$if(footer_center)$ footer_center: "$footer_center$", $endif$
   cols: $if(columns)$$columns$$else$1$endif$,
   doc,
 )

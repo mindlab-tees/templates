@@ -1,31 +1,72 @@
 ---
 title: This is an awesome poster title
 authors: 
-  - name: Christoph Schmitt
-    affiliation: University of Freiburg
-    email: email@email.com
-  - name: Jim O' Neill
-    affiliation: University of Freiburg
-    email: email@email.com
-header_left: "images/mindlab.png"
-header_right: "images/tu.png"
+  - name: Christopher Wilson
+    affiliation: Teesside University
+
+  - name: Srdan Medimorec
+    affiliation: Teesside University
+
+header_bg_color: "cc6b0a"
+header_text_color: "ffffff"
+header_left: "images/mindlabwhite.png"
+header_right: "images/tuwhite.png"
+footer_bg_color: "cc6b0a"
+footer_text_color: "ffffff"
+footer_left: "www.themindlab.uk"
+footer_right: "Teesside University Research Fair"
+footer_center: "24/07/2025"
 format:
   poster-typst: default
 ---
 
-## Introduction
-
+## Overview
+::: {.block fill="luma(230)" inset="8pt" radius="4pt"}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum nisi non ante tempor varius. Quisque dapibus dolor a quam commodo mattis. Sed rutrum lacus in mattis sagittis. Aliquam commodo tortor placerat magna ultricies, nec facilisis est pulvinar. Aliquam laoreet massa lacus, rhoncus imperdiet augue viverra vitae. Proin a augue turpis. Phasellus et quam erat. Nunc nec egestas dolor. Integer sagittis vitae massa ac tincidunt. Donec lobortis nibh vitae ex vestibulum ornare. Sed condimentum a diam vitae luctus.
+
+**Keywords:** Hypomania, Risk, Brain-imaging
+:::
+
+## Background 
 
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis lacus dolor, pharetra in sapien vel, malesuada laoreet ligula. Sed ligula tellus, mollis congue sem eget, bibendum feugiat odio. Curabitur molestie pulvinar nunc. Integer pretium ante dolor, et laoreet massa porttitor quis. Integer est lacus, tristique a nisi in, aliquet lobortis dolor. Suspendisse potenti. Curabitur eget sapien et diam molestie elementum sed et nisi.
 
+## Hypotheses
+
+### Study 1:
+
+- **Hypothesis 1:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- **Hypothesis 2:** Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+### Study 2:
 
 
-## More Information
+- **Hypothesis 1:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- **Hypothesis 2:** Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-You can learn more about creating custom Typst templates here: 
+## Methods
 
-<https://quarto.org/docs/prerelease/1.4/typst.html#custom-formats>
+### Experiment 1 Procedure
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum nisi non ante tempor varius. Quisque dapibus dolor a quam commodo mattis. Sed rutrum lacus in mattis sagittis. 
+
+### Experiment 2 Procedure
+
+Aliquam commodo tortor placerat magna ultricies, nec facilisis est pulvinar. Aliquam laoreet massa lacus, rhoncus imperdiet augue viverra vitae. Proin a augue turpis. Phasellus et quam erat. 
+
+## Results
+
+### Experiment 1 Results
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum nisi non ante tempor varius. Quisque dapibus dolor a quam commodo mattis. Sed rutrum lacus in mattis sagittis. Aliquam commodo tortor placerat magna ultricies, nec facilisis est pulvinar. Aliquam laoreet massa lacus, rhoncus imperdiet augue viverra vitae. Proin a augue turpis. 
+
+### Experiment 2 Results
+
+Aliquam laoreet massa lacus, rhoncus imperdiet augue viverra vitae. Proin a augue turpis. Phasellus et quam erat. Nunc nec egestas dolor. Integer sagittis vitae massa ac tincidunt. Donec lobortis nibh vitae ex vestibulum ornare. Sed condimentum a diam vitae luctus.
+
+## Discussion
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis lacus dolor, pharetra in sapien vel, malesuada laoreet ligula. Sed ligula tellus, mollis congue sem eget, bibendum feugiat odio. Curabitur molestie pulvinar nunc. Integer pretium ante dolor, et laoreet massa porttitor quis. Integer est lacus, tristique a nisi in, aliquet lobortis dolor. Suspendisse potenti. Curabitur eget sapien et diam molestie elementum sed et nisi.
 
 
 
