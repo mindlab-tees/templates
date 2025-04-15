@@ -1,18 +1,23 @@
 ---
-title: Untitled
+title: This is an awesome poster title
 authors: 
   - name: Christoph Schmitt
-  - affiliation: University of Freiburg
-  - email: email@email.com
-  - name: Jim 
-  
+    affiliation: University of Freiburg
+    email: email@email.com
+  - name: Jim O' Neill
+    affiliation: University of Freiburg
+    email: email@email.com
 format:
   poster-typst: default
 ---
 
 ## Introduction
 
-*TODO* Create an example file that demonstrates the formatting and features of your format.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum nisi non ante tempor varius. Quisque dapibus dolor a quam commodo mattis. Sed rutrum lacus in mattis sagittis. Aliquam commodo tortor placerat magna ultricies, nec facilisis est pulvinar. Aliquam laoreet massa lacus, rhoncus imperdiet augue viverra vitae. Proin a augue turpis. Phasellus et quam erat. Nunc nec egestas dolor. Integer sagittis vitae massa ac tincidunt. Donec lobortis nibh vitae ex vestibulum ornare. Sed condimentum a diam vitae luctus.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis lacus dolor, pharetra in sapien vel, malesuada laoreet ligula. Sed ligula tellus, mollis congue sem eget, bibendum feugiat odio. Curabitur molestie pulvinar nunc. Integer pretium ante dolor, et laoreet massa porttitor quis. Integer est lacus, tristique a nisi in, aliquet lobortis dolor. Suspendisse potenti. Curabitur eget sapien et diam molestie elementum sed et nisi.
+
+
 
 ## More Information
 
