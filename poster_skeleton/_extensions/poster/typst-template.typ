@@ -15,6 +15,7 @@
 
 // set defaults
   title: none,
+  header_height: "11",
   header_left: "images/mindlab.png",
   header_right: "images/tu.png",
   header_bg_color: none,
@@ -22,16 +23,16 @@
   subtitle: none,
   authors: none,
 
-  title_text_size: 80pt,
+  title_text_size: "80",
   title_color: "ffffff",
-  author_text_size: 32pt,
+  author_text_size: "32",
 
   footer_left: none,
   footer_right: none,
   footer_center: none,
   footer_bg_color: none,
   footer_text_color: "ffffff",
-  
+  footer_text_size: "30",
   cols: 3,
   width: 841mm,
   height:594mm,
@@ -39,7 +40,7 @@
   region: "UK",
   font: "Lexica Ultralegible",
   
-  fontsize: 28pt,
+  body_text_size: "28",
  
   heading-family: "Lexica Ultralegible",
   heading-weight: "bold",
@@ -50,10 +51,20 @@
   toc: false,
   doc,
 ) = {
+
+
+// calc the values
+
+title_text_size = int(title_text_size) * 1pt
+author_text_size = int(author_text_size) * 1pt
+body_text_size = int(body_text_size) * 1pt
+footer_text_size = int(footer_text_size) *1pt
+header_height = int(header_height) * 1cm
+
   set page(
     width: width,
     height: height,
-    margin:  (x: 0cm, top: 12cm),
+    margin:  (x: 0cm, top: header_height, bottom: 3cm),
     
     
     footer: if (footer_left != none or footer_center != none or footer_right != none) {
@@ -61,15 +72,15 @@
     block(
       width: 100%,
       height: 3cm,
-      below: 1cm,
-      inset: 1cm,
+      //below: 1cm,
+      inset: 0.6cm,
       fill: rgb(footer_bg_color), // Background color from YAML
       text(fill: rgb(footer_text_color), font: "Liberation Mono")[ // Text color from YAML
         #grid( // Grid for left/center/right layout
           columns: (1fr, auto, 1fr),
-          align(left)[#footer_left],     // Left content from YAML
-          align(center)[#footer_center], // Center content from YAML
-          align(right)[#footer_right],   // Right content from YAML
+          align(left)[ #text(size: footer_text_size)[#footer_left]],     // Left content from YAML
+          align(center)[ #text(size: footer_text_size)[#footer_center]], // Center content from YAML
+          align(right)[ #text(size: footer_text_size)[#footer_right]],   // Right content from YAML
         )
       ]
     )
@@ -82,7 +93,7 @@
     // This block defines the content and appearance of the header region
     block(
       width: 100%,
-      height: 11cm,
+      height: header_height,
       below: 1cm,
       inset: 1cm,
       fill: rgb(header_bg_color), // Background color from YAML
@@ -92,9 +103,9 @@
           columns: (1fr, auto, 1fr),
           inset: 1cm,
            if header_left != none { 
-          align(left)[#image(header_left, width: 50%, height: 50%)]},     // Left content from YAML
+          align(left)[#image(header_left, width: 50%, height: 50%, fit: "contain")]},     // Left content from YAML
           if title != none {   align(center)[  #text(size: title_text_size)[#title]]},
-         if header_right != none {  align(right)[#image(header_right, width: 50%, height: 50%)]},   // Right content from YAML
+         if header_right != none {  align(right)[#image(header_right, width: 50%, height: 50%, fit: "contain")]},   // Right content from YAML
           
           )
       
@@ -127,7 +138,7 @@
   set text(lang: lang,
            region: region,
            font: font,
-           size: fontsize)
+           size: body_text_size)
   set heading(numbering: sectionnumbering)
 
 

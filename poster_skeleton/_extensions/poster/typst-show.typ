@@ -15,10 +15,12 @@
 
 #show: doc => poster(
 
+$if(header_height)$ header_height: "$header_height$", $endif$
 $if(header_text_color)$ header_text_color: "$header_text_color$", $endif$
 $if(header_bg_color)$ header_bg_color: "$header_bg_color$", $endif$
 $if(header_left)$ header_left: "$header_left$", $endif$
 $if(title)$ title: [$title$], $endif$
+$if(title_text_size)$ title_text_size: "$title_text_size$", $endif$
 $if(subtitle)$ subtitle: [$subtitle$],$endif$
 $if(header_right)$ header_right: "$header_right$", $endif$
 $if(author_text_size)$ author_text_size: "$author_text_size$", $endif$
@@ -57,31 +59,7 @@ $if(mainfont)$
 $elseif(brand.typography.base.family)$
   font: ("$brand.typography.base.family$",),
 $endif$
-$if(fontsize)$
-  fontsize: $fontsize$,
-$elseif(brand.typography.base.size)$
-  fontsize: $brand.typography.base.size$,
-$endif$
-$if(title)$
-$if(brand.typography.headings.family)$
-  heading-family: ("$brand.typography.headings.family$",),
-$endif$
-$if(brand.typography.headings.weight)$
-  heading-weight: $brand.typography.headings.weight$,
-$endif$
-$if(brand.typography.headings.style)$
-  heading-style: "$brand.typography.headings.style$",
-$endif$
-$if(brand.typography.headings.decoration)$
-  heading-decoration: "$brand.typography.headings.decoration$",
-$endif$
-$if(brand.typography.headings.color)$
-  heading-color: $brand.typography.headings.color$,
-$endif$
-$if(brand.typography.headings.line-height)$
-  heading-line-height: $brand.typography.headings.line-height$,
-$endif$
-$endif$
+$if(body_text_size)$ body_text_size: "$body_text_size$", $endif$
 $if(section-numbering)$
   sectionnumbering: "$section-numbering$",
 $endif$
@@ -90,6 +68,7 @@ $if(footer_text_color)$ footer_text_color: "$footer_text_color$", $endif$
 $if(footer_right)$ footer_right: "$footer_right$", $endif$
 $if(footer_left)$ footer_left: "$footer_left$", $endif$
 $if(footer_center)$ footer_center: "$footer_center$", $endif$
+$if(footer_text_size)$ footer_text_size: "$footer_text_size$", $endif$
   cols: $if(columns)$$columns$$else$1$endif$,
   doc,
 )

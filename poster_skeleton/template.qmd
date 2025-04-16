@@ -3,10 +3,10 @@ title: This is an awesome poster title
 authors: 
   - name: Christopher Wilson
     affiliation: Teesside University
-
+    
   - name: Srdan Medimorec
     affiliation: Teesside University
-
+header_height: "12" # poster header height in cm
 header_bg_color: "cc6b0a"
 header_text_color: "ffffff"
 header_left: "images/mindlabwhite.png"
@@ -16,12 +16,17 @@ footer_text_color: "ffffff"
 footer_left: "www.themindlab.uk"
 footer_right: "Teesside University Research Fair"
 footer_center: "24/07/2025"
+title_text_size: "80"
+author_text_size: "40"
+body_text_size: "28"
+footer_text_size: "30"
+
 format:
   poster-typst: default
 ---
 
 ## Overview
-::: {.block fill="luma(230)" inset="8pt" radius="4pt"}
+::: {.block stroke="black" inset="12pt" radius="12pt"}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum nisi non ante tempor varius. Quisque dapibus dolor a quam commodo mattis. Sed rutrum lacus in mattis sagittis. Aliquam commodo tortor placerat magna ultricies, nec facilisis est pulvinar. Aliquam laoreet massa lacus, rhoncus imperdiet augue viverra vitae. Proin a augue turpis. Phasellus et quam erat. Nunc nec egestas dolor. Integer sagittis vitae massa ac tincidunt. Donec lobortis nibh vitae ex vestibulum ornare. Sed condimentum a diam vitae luctus.
 
 **Keywords:** Hypomania, Risk, Brain-imaging
