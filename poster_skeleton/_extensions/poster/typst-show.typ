@@ -63,6 +63,7 @@ $if(body_text_size)$ body_text_size: "$body_text_size$", $endif$
 $if(section-numbering)$
   sectionnumbering: "$section-numbering$",
 $endif$
+$if(footer_height)$ footer_height: "$footer_height$", $endif$
 $if(footer_bg_color)$ footer_bg_color: "$footer_bg_color$", $endif$
 $if(footer_text_color)$ footer_text_color: "$footer_text_color$", $endif$
 $if(footer_right)$ footer_right: "$footer_right$", $endif$

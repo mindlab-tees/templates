@@ -11,6 +11,7 @@ header_bg_color: "cc6b0a"
 header_text_color: "ffffff"
 header_left: "images/mindlabwhite.png"
 header_right: "images/tuwhite.png"
+footer_height: "3" # poster footer height in cm
 footer_bg_color: "cc6b0a"
 footer_text_color: "ffffff"
 footer_left: "www.themindlab.uk"

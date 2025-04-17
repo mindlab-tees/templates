@@ -26,13 +26,15 @@
   title_text_size: "80",
   title_color: "ffffff",
   author_text_size: "32",
-
+  
+  footer_height: "3", // footer height in cm
   footer_left: none,
   footer_right: none,
   footer_center: none,
   footer_bg_color: none,
   footer_text_color: "ffffff",
   footer_text_size: "30",
+  
   cols: 3,
   width: 841mm,
   height:594mm,
@@ -60,20 +62,21 @@ author_text_size = int(author_text_size) * 1pt
 body_text_size = int(body_text_size) * 1pt
 footer_text_size = int(footer_text_size) *1pt
 header_height = int(header_height) * 1cm
+footer_height = int(footer_height) * 1cm
 
   set page(
     width: width,
     height: height,
-    margin:  (x: 0cm, top: header_height, bottom: 3cm),
+    margin:  (x: 0cm, top: header_height, bottom: footer_height),
     
     
     footer: if (footer_left != none or footer_center != none or footer_right != none) {
     // This block defines the content and appearance of the footer region
     block(
       width: 100%,
-      height: 3cm,
+      height: footer_height,
       //below: 1cm,
-      inset: 0.6cm,
+      inset: (left: 1cm, right: 1cm, y: 0.7cm ),
       fill: rgb(footer_bg_color), // Background color from YAML
       text(fill: rgb(footer_text_color), font: "Liberation Mono")[ // Text color from YAML
         #grid( // Grid for left/center/right layout
