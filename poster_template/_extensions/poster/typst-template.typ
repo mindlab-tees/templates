@@ -97,18 +97,18 @@ footer_height = int(footer_height) * 1cm
     block(
       width: 100%,
       height: header_height,
-      below: 1cm,
+      //below: 1cm,
       inset: 1cm,
       fill: rgb(header_bg_color), // Background color from YAML
       text(fill: rgb(header_text_color))[ // Text color from YAML
 
         #grid( // Grid for left/center/right layout
-          columns: (1fr, auto, 1fr),
-          inset: 1cm,
+          columns: (15%, 70%, 15%),
+          inset: (x: 0cm, top: 2.5cm),
            if header_left != none { 
-          align(left)[#image(header_left, width: 50%, height: 50%, fit: "contain")]},     // Left content from YAML
-          if title != none {   align(center)[  #text(size: title_text_size)[#title]]},
-         if header_right != none {  align(right)[#image(header_right, width: 50%, height: 50%, fit: "contain")]},   // Right content from YAML
+          align(left)[#image(header_left, width: 100%, height: title_text_size, fit: "contain")]},     // Left content from YAML
+          if title != none {   align(center)[  #text(size: title_text_size, top-edge: 0.8cm, bottom-edge: 1cm)[#title]]},
+         if header_right != none {  align(right)[#image(header_right, width: 100%, height: title_text_size, fit: "contain")]},   // Right content from YAML
           
           )
       
@@ -117,7 +117,7 @@ footer_height = int(footer_height) * 1cm
     
       #grid(
       columns: (1fr,) * ncols,
-      row-gutter: 1em,
+      row-gutter: 0cm,
       ..authors.map(author =>
           align(center)[
            #text(size: author_text_size)[ #author.name] \
